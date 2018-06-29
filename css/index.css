@@ -1,0 +1,203 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	display: block;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.screen{
+	width: 100%;
+	height: 7.94rem;
+	background-image: url("../img/scen.png");
+	background-size: 7.5rem 7.94rem;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.screen .letter1{
+	width: 0.53rem;
+	height: 0.77rem;
+	
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.screen .letter{
+	width: 0.53rem;
+	height: 0.77rem;
+	background-image: url("../img/A_Z/A.png");
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: top .1s linear;
+}
+body{
+	background-image: url("../img/qiang.png");
+	background-size: 7.5rem 0.99rem;
+}
+
+.keyArea{
+	width: 100%;
+	height: 5.22rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-image: url("../img/key.png");
+	background-size: 7.5rem 5.22rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* display: none; */
+}
+.keyArea .keyCon{
+	width: 7.2rem;
+	height: 4rem;
+	background-color: rgba(33,76,209,0.8);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.keyArea .keyCon .key{
+	width: 0.5rem;
+	height: 0.8rem;
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 0.8rem;
+	margin: 0 0.09rem;
+	background-image: url("../img/Letter.png");
+	background-size: contain;
+}
+.keyArea .keyCon .key:nth-child(11){
+	margin-left: 0.3rem;
+}
+.keyArea .keyCon .key:nth-child(19){
+	margin-right: 0.3rem;
+}
+
+.music{
+	width: 0.5rem;
+	height: 0.5rem;
+	background-image: url("../img/Aplay.png");
+	background-size: contain;
+	position: fixed;
+	right: 0.3rem;
+	top: 0.3rem;
+	z-index: 99;
+}
+.musicActive{
+	background-image: url("../img/Apause.png");
+}
+.life,.source{
+	width: 1.22rem;
+	height: 1.21rem;
+	background-image: url("../img/Health.png");
+	background-size: contain;
+	position: fixed;
+	top: 2.85rem;
+	right: 0.3rem;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.5rem;
+}
+
+.source{
+	top: 4.25rem;
+	background-image: url("../img/Point.png");
+}
+.status{
+	width: 0.99rem;
+	height: 0.98rem;
+	background-image: url("../img/Pause.png");
+	background-size: contain;
+	position: fixed;
+	top: 5.86rem;
+	right: 0.3rem;
+}
+.pause{
+	background-image: url("../img/Play.png");
+}
+.gameOver{
+	width: 4.30rem;
+	height: 0rem;
+	background-image: url("../img/gameover.png");
+	background-size: 4.3rem 4.49rem;
+	position: fixed;
+	top: 1rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: height .2s linear;
+	overflow: hidden;
+	z-index: 99;
+	text-align: center;
+}
+.gameOver span{
+	font-size: 0.5rem;
+	color: red;
+	position: absolute;
+	top: 2.5rem;
+	left: 2rem;
+}
+
+.gameOverActive{
+	height: 4.49rem;
+}
+.gameOver .btn{
+	width: 2.63rem;
+	height: 0.6rem;
+	/* background-image: url("../img/btn.png"); */
+	background-size: contain;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 0.5rem;
+	background-image: linear-gradient(#26E30D,#22A511);
+	font-size: 0.4rem;
+	text-align: center;
+	color: #fff;
+	line-height: 0.6rem;
+}
+.clound{
+	width: 4.95rem;
+	height: 0.56rem;
+	position: fixed;
+	top: 1rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-image: url("../img/clound_06.png");
+	background-size: contain;
+	animation: left 2s infinite alternate;
+	z-index: 99;
+}
+
+.zezhao{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+@keyframes left{
+	from{
+		transform:  translateX(1.5rem);
+	}
+	to{
+		transform: translateX(-1.5rem);
+	}
+}
+
+
